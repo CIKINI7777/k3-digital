@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSAT KAWALAN K3</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ PUSAT KAWALAN K3 DIGITAL</h1>
+            <div class="status">🟢 SISTEM ONLINE | <span id="clock">00:00:00</span></div>
+        </header>
+
+        <div class="grid">
+            <!-- Panel Kiri: Statistik -->
+            <div class="panel">
+                <h3>📊 STATISTIK HARI INI</h3>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="label">TOTAL ABSEN</div>
+                        <div class="value" id="total-absen">0</div>
+                    </div>
+                    <div class="stat-box warning">
+                        <div class="label">DEPARTEMEN AKTIF</div>
+                        <div class="value" id="total-dept">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel Kanan: Log Aktivitas -->
+            <div class="panel">
+                <h3>📡 LOG ABSENSI REAL-TIME</h3>
+                <ul id="log-list" class="log-list">
+                    <li>Memuat data...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
