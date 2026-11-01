@@ -1,5 +1,5 @@
 // GANTI URL DI BAWAH INI DENGAN URL DARI APPS SCRIPT
-const API_URL = 'PASTE_URL_APPS_SCRIPT_DISINI';
+const API_URL = 'https://script.google.com/macros/s/AKfycbzTDENR5ZzLbveW-JZnu7WrDGUYuTht8kwO9X61QFBjIk8lg14mqX994kolWNnmIh_2/exec';
 
 // Fungsi Jam
 setInterval(() => {
