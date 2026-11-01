@@ -15,7 +15,21 @@
         </header>
 
         <div class="grid">
-            <!-- Panel Kiri: Statistik -->
+            <!-- Panel Radar GPS -->
+            <div class="panel radar-panel">
+                <h3>📡 RADAR SEBARAN KARYAWAN</h3>
+                <div class="radar-screen" id="radar-screen">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-center"></div>
+                    <div class="radar-rings"></div>
+                </div>
+                <div class="radar-info">
+                    <span>Target: <strong id="target-count">0</strong></span> | 
+                    <span>Area: <strong>Plant 1</strong></span>
+                </div>
+            </div>
+
+            <!-- Panel Statistik -->
             <div class="panel">
                 <h3>📊 STATISTIK HARI INI</h3>
                 <div class="stats">
@@ -28,10 +42,13 @@
                         <div class="value" id="total-dept">0</div>
                     </div>
                 </div>
+                <div style="margin-top:20px; text-align:center;">
+                    <a href="absen.html" class="btn-link">📱 BUKA APLIKASI ABSENSI →</a>
+                </div>
             </div>
 
-            <!-- Panel Kanan: Log Aktivitas -->
-            <div class="panel">
+            <!-- Panel Log -->
+            <div class="panel log-panel">
                 <h3>📡 LOG ABSENSI REAL-TIME</h3>
                 <ul id="log-list" class="log-list">
                     <li>Memuat data...</li>
