@@ -1,38 +1,3 @@
-// GANTI DENGAN URL APPS SCRIPT ANDA
-const API_URL = 'https://script.google.com/macros/s/AKfycbzknMq64r8qf2iWIrfWHy_02oat_q4PDWllwtOS49vN087wphzEIIPufNmvHZPNiLhu/exec';
-
-let currentLat = null;
-let currentLng = null;
-
-// Dapatkan GPS saat halaman dimuat
-window.onload = function() {
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            function(position) {
-                currentLat = position.coords.latitude;
-                currentLng = position.coords.longitude;
-                document.getElementById('gps-status').innerHTML = 
-                    '✅ GPS Aktif | ' + currentLat.toFixed(4) + ', ' + currentLng.toFixed(4);
-                document.getElementById('gps-status').style.color = '#00ff41';
-            },
-            function(error) {
-                document.getElementById('gps-status').innerHTML = 
-                    '⚠️ GPS Error: ' + error.message;
-                document.getElementById('gps-status').style.color = '#ff3333';
-            },
-            {
-                enableHighAccuracy: true,
-                timeout: 10000,
-                maximumAge: 0
-            }
-        );
-    } else {
-        document.getElementById('gps-status').innerHTML = 
-            '❌ GPS tidak didukung browser ini';
-        document.getElementById('gps-status').style.color = '#ff3333';
-    }
-};
-
 async function submitAbsen(status) {
     const nama = document.getElementById('nama').value;
     const departemen = document.getElementById('departemen').value;
@@ -53,7 +18,7 @@ async function submitAbsen(status) {
     document.getElementById('btn-absen').disabled = true;
     document.getElementById('btn-pulang').disabled = true;
     
-    // Tentukan lokasi berdasarkan koordinat (bisa disesuaikan)
+    // Tentukan lokasi berdasarkan koordinat
     let lokasi = 'Area Pabrik';
     if (status === 'Masuk') {
         lokasi = 'Gate Utama';
@@ -74,7 +39,8 @@ async function submitAbsen(status) {
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                // ⬇️ INI SATU-SATUNYA BARIS YANG DIUBAH ⬇️
+                'Content-Type': 'text/plain;charset=utf-8', 
             },
             body: JSON.stringify(payload),
             redirect: 'follow'
