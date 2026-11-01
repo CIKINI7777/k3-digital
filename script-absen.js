@@ -1,5 +1,5 @@
 // GANTI DENGAN URL APPS SCRIPT ANDA
-const API_URL = 'https://script.google.com/macros/s/AKfycbzTDENR5ZzLbveW-JZnu7WrDGUYuTht8kwO9X61QFBjIk8lg14mqX994kolWNnmIh_2/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbzknMq64r8qf2iWIrfWHy_02oat_q4PDWllwtOS49vN087wphzEIIPufNmvHZPNiLhu/exec';
 
 let currentLat = null;
 let currentLng = null;
